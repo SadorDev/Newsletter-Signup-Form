@@ -2,16 +2,17 @@
 
 #Ignore
 README.md
-favicon.ico
-logo.192.png
-logo512.png
-manifest.json
-robots.txt
-App.test.js
-index.css
-logo.svg
-reportWebVitals.js
-setupTests.js
+public/favicon.ico
+public/logo192.png
+public/logo512.png
+public/manifest.json
+public/robots.txt
+src/App.test.js
+src/index.css
+src/logo.svg
+src/reportWebVitals.js
+src/setupTests.js
+
 
 # dependencies
 /node_modules

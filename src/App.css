@@ -1,38 +1,168 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: hsl(235, 18%, 26%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 100%;
+  max-width: 59rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form_container {
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form_content {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex: 1;
+  padding: 15px;
+  z-index: 2;
+}
+
+.form_content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form_content p,
+.form_content ul,
+.form_content span {
+  width: 100%;
+}
+
+.list_icon {
+  margin-left: -70px;
+  padding: 5px;
+}
+
+.list_icon span {
+  margin: 0.5rem;
+}
+
+.form_wallpaper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  object-fit: fill;
+}
+
+.form_wallpaper img {
+  width: 100%;
+  height: auto;
+}
+
+/* Hide desktop wallpaper on mobile */
+.form_wallpaper img:first-child {
+  display: none;
+}
+
+/* Show mobile wallpaper on mobile */
+.form_wallpaper img:last-child {
+  display: block;
+}
+
+input[type="email"] {
+  margin: 8px 0;
+  padding: 12px 20px;
+  height: 4rem;
+  width: 90%;
+  box-sizing: border-box;
+  border: 1px solid hsl(231, 7%, 60%);
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  margin: 8px;
+  padding: 12px 20px;
+  height: 3.5rem;
+  width: 90%;
+  border: none;
+  border-radius: 10px;
   color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: hsl(234, 29%, 20%);
 }
 
-.App-link {
-  color: #61dafb;
+button[type="submit"]:hover {
+  background-color: hsl(234, 29%, 20%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+li {
+  list-style: none;
+  padding-left: 0;
+}
+
+.email_object {
+  font-weight: bold;
+  margin: 0 0.25em;
+}
+
+
+/* Media Queries  */
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 350px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .list_icon {
+    margin-left: -1.5em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .form_container {
+    flex-direction: row;
+    padding: 1.5em;
+  }
+
+  .form_content h1 {
+    font-size: 3.85rem;
+  }
+
+  .form_content p,
+  .form_content ul,
+  .form_content span {
+    text-align: left;
+    width: auto;
+  }
+
+  .form_wallpaper {
+    position: relative;
+    z-index: 2;
+  }
+
+  .form_content {
+    z-index: 1;
+    background-color: transparent;
+  }
+
+  /* Show desktop wallpaper on larger screens */
+  .form_wallpaper img:first-child {
+    display: block;
+  }
+
+  /* Hide mobile wallpaper on larger screens */
+  .form_wallpaper img:last-child {
+    display: none;
   }
 }

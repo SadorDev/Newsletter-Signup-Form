@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.success_container {
+  width: 100%;
+  max-width: 400px;
+  padding: 50px 40px 50px 35px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.success_tick {
+  position: relative;
+  left: 20px;
+  top: 1.1em;
+}
+
+.success_content {
+  padding: 15px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: left;
+  color: hsl(235, 18%, 26%);
+}
+
+p {
+  color: hsl(235, 18%, 26%);
+}
+
+button[type="button"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+  height: 48px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(234, 29%, 20%);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+button[type="button"]:hover {
+  background-color: hsl(4, 100%, 60%);
+}
+
+@media only screen and (max-width: 425px) {
+  .success_container {
+    max-width: 20rem;
+    padding: 2rem;
+  }
+}
